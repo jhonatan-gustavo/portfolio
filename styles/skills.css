@@ -49,6 +49,14 @@
   animation: marquee-left 48s linear infinite;
 }
 
+.marquee__row--4 .marquee__track {
+  animation: marquee-right 42s linear infinite;
+}
+
+.marquee__row--5 .marquee__track {
+  animation: marquee-left 46s linear infinite;
+}
+
 .marquee__item {
   display: inline-flex;
   align-items: center;

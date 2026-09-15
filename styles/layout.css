@@ -472,8 +472,17 @@ p,
 /* ── Responsive Nav ── */
 @media (max-width: 768px) {
   .nav {
-    top: var(--space-sm);
-    padding: 8px 10px 8px 16px;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    padding: 10px var(--container-padding);
+    border-bottom: 1px solid var(--nav-border);
+    border-left: none;
+    border-right: none;
+    border-top: none;
   }
 
   .nav--scrolled {

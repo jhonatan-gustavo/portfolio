@@ -114,8 +114,8 @@
   --nav-border: rgba(0, 0, 0, 0.06);
 
   /* ── Theme Toggle Light ── */
-  --toggle-bg: rgba(0, 0, 0, 0.06);
-  --toggle-knob: #FFFFFF;
+  --toggle-bg: rgba(5, 150, 105, 0.1);
+  --toggle-knob: var(--text-primary);
 
   --blob-1: rgba(0, 223, 129, 0.12);
   --blob-2: rgba(6, 182, 212, 0.1);

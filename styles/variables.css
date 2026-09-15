@@ -32,7 +32,8 @@
   /* ── Tipografía ── */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
-  --fs-display: clamp(3rem, 8vw, 8rem);
+  --font-heading: 'Syne', 'Inter', sans-serif;
+  --fs-display: clamp(2.5rem, 6.5vw, 7rem);
   --fs-h1: clamp(2.5rem, 6vw, 6rem);
   --fs-h2: clamp(1.75rem, 4vw, 3.5rem);
   --fs-h3: clamp(1.25rem, 2vw, 1.75rem);

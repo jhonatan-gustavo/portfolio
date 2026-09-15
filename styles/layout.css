@@ -39,6 +39,7 @@ body,
 }
 
 .section h2 {
+  font-family: var(--font-heading);
   font-size: var(--fs-h2);
   font-weight: var(--fw-bold);
   letter-spacing: var(--ls-tight);
@@ -282,6 +283,7 @@ p,
 }
 
 .hero__name {
+  font-family: var(--font-heading);
   font-size: var(--fs-display);
   font-weight: var(--fw-black);
   line-height: var(--lh-tight);
@@ -379,6 +381,7 @@ p,
 }
 
 .about__headline {
+  font-family: var(--font-heading);
   font-size: var(--fs-h2);
   font-weight: var(--fw-bold);
   letter-spacing: var(--ls-tight);

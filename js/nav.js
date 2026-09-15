@@ -32,6 +32,11 @@ export function initNav() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav__links a');
 
+  // ── Mobile Menu ──
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-menu__link');
+
   if (!toggle) return;
 
   // ── Theme Toggle ──
@@ -46,6 +51,60 @@ export function initNav() {
     html.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
   });
+
+  // ── Hamburger Menu ──
+  function closeMobileMenu() {
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Abrir menú');
+    mobileMenu.classList.remove('is-open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    html.style.overflow = '';
+  }
+
+  function openMobileMenu() {
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', 'Cerrar menú');
+    mobileMenu.classList.add('is-open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    html.style.overflow = 'hidden';
+  }
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+
+    // Cerrar menú al hacer clic en un enlace + scroll suave
+    mobileLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const target = document.querySelector(targetId);
+
+        closeMobileMenu();
+
+        if (target) {
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 300);
+        }
+      });
+    });
+
+    // Cerrar menú con tecla Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && hamburger.getAttribute('aria-expanded') === 'true') {
+        closeMobileMenu();
+      }
+    });
+  }
 
   // ── Nav Scroll Expansion (Pill → Full Width) ──
   if (nav) {

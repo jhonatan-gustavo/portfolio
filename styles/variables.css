@@ -123,4 +123,8 @@
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
   --shadow-glow: 0 0 20px rgba(5, 150, 105, 0.15);
+
+  /* Glass3D Light */
+  --filter-glass3d: blur(32px) brightness(1.1) saturate(1.2);
+  --color-glass3d: rgba(240, 253, 244, 0.5);
 }

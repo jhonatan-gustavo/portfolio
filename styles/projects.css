@@ -54,12 +54,10 @@
   grid-template-columns: 1.1fr 1fr;
   gap: var(--space-xl);
   align-items: center;
-  background: var(--bg-card);
   border: 1px solid rgba(0, 223, 129, 0.12);
   border-radius: 16px;
   padding: var(--space-xl);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
   transition: border-color var(--duration-normal) ease, box-shadow var(--duration-normal) ease;
 }
 
@@ -179,6 +177,16 @@
 
 .project-card__link:hover svg {
   transform: translate(3px, -3px);
+}
+
+/* ── Light Theme Project Cards ── */
+[data-theme="light"] .project-card__inner {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .project-card:hover .project-card__inner {
+  border-color: var(--accent-1);
+  box-shadow: 0 10px 40px -10px rgba(5, 150, 105, 0.15);
 }
 
 /* ── Responsive ── */

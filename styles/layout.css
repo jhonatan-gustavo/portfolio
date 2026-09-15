@@ -161,6 +161,9 @@ body,
   padding: 10px 12px 10px 24px;
   border: 1px solid var(--nav-border);
   border-radius: var(--radius-full);
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .nav--scrolled {

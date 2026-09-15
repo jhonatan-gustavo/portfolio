@@ -16,8 +16,8 @@
   --border-hover: rgba(0, 223, 129, 0.25);
 
   /* ── Nav Glassmorphism ── */
-  --nav-bg: rgba(8, 16, 24, 0.75);
-  --nav-border: rgba(0, 223, 129, 0.1);
+  --nav-bg: rgba(8, 16, 24, 0.55);
+  --nav-border: rgba(0, 223, 129, 0.08);
   --nav-blur: 20px;
 
   /* ── Theme Toggle ── */
@@ -110,7 +110,7 @@
   --border-hover: rgba(5, 150, 105, 0.3);
 
   /* ── Nav Glass Cristalino ── */
-  --nav-bg: rgba(255, 255, 255, 0.7);
+  --nav-bg: rgba(255, 255, 255, 0.5);
   --nav-border: rgba(0, 0, 0, 0.06);
 
   /* ── Theme Toggle Light ── */
@@ -128,5 +128,5 @@
 
   /* Glass3D Light */
   --filter-glass3d: blur(16px) saturate(180%);
-  --color-glass3d: rgba(255, 255, 255, 0.7);
+  --color-glass3d: rgba(255, 255, 255, 0.4);
 }

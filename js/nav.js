@@ -192,34 +192,4 @@ export function initNav() {
       delay: i * 2,
     });
   });
-
-  // ── Brand Colors on Project Tags ──
-  const projectTags = document.querySelectorAll('.project-card__tags .tag[data-brand]');
-  projectTags.forEach((tag) => {
-    const brand = tag.dataset.brand;
-    const color = BRAND_COLORS[brand];
-    if (!color) return;
-
-    tag.style.setProperty('--brand-color', color);
-
-    tag.addEventListener('mouseenter', () => {
-      gsap.to(tag, {
-        borderColor: color,
-        color: color,
-        backgroundColor: `${color}15`,
-        duration: 0.2,
-        ease: 'power2.out',
-      });
-    });
-
-    tag.addEventListener('mouseleave', () => {
-      gsap.to(tag, {
-        borderColor: 'var(--border)',
-        color: 'var(--text-muted)',
-        backgroundColor: 'transparent',
-        duration: 0.25,
-        ease: 'power2.out',
-      });
-    });
-  });
 }
